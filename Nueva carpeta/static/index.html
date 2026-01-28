@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Remote PC — Cliente</title>
+  <style>
+    body{font-family: Arial; padding:12px}
+    #screen{max-width:100%; border:1px solid #ccc; display:block; margin:8px 0}
+    #controls{display:flex; gap:8px; margin-top:8px}
+  </style>
+</head>
+<body>
+  <h2>Remote PC (Web)</h2>
+
+  <label>Nombre de dispositivo:<br><input id="devName" value="MiBrowser"></label><br><br>
+  <label>IP del servidor (ej: 192.168.1.34):<br><input id="serverIp"></label><br><br>
+  <label>Código de sesión:<br><input id="sessionCode" type="password"></label><br><br>
+  <button id="connectBtn">Conectar</button>
+  <p id="status">Estado: desconectado</p>
+
+  <img id="screen" src="" alt="Pantalla remota" style="display:none">
+
+  <div id="controls" style="display:none">
+    <button id="mouseBtn">Modo Mouse</button>
+    <input id="textBox" placeholder="Escribir texto aquí">
+    <button id="sendText">Enviar texto</button>
+    <button id="disconnect">Desconectar</button>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
